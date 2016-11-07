@@ -4,10 +4,7 @@
 .idea/
 build.gradle
 build/
-gradle.properties
-gradle/
-gradlew
-gradlew.bat
+
 local.properties
 settings.gradle
 *.iml
