@@ -2,9 +2,7 @@
 .gitignore
 .gradle/
 .idea/
-build.gradle
 build/
-
 local.properties
 settings.gradle
 *.iml
