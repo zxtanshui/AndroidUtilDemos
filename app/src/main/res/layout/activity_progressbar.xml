@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffaa11"
+>
+    <RelativeLayout
+        android:id="@+id/rl_time_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.xinxiong.androidutilsdemo.roundprogressbar.RoundProgressBar
+            android:id="@+id/roundProgressBar1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android_custom:textColor="#ffffff"
+            android_custom:roundProgressColor="#ffffff"
+            android_custom:roundColor="#ff0000"
+            android_custom:roundWidth="2dp"
+            android_custom:textColor1="#000000"
+            android_custom:textSize="10sp"
+
+        />
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Button"
+      />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
