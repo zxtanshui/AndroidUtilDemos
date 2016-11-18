@@ -19,7 +19,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
      Button btn_morewindow;
     @BindView(R.id.btn_roundprogressbar)
      Button btn_roundprogressbar;
-    MoreWindow mMoreWindow;
+     MoreWindow mMoreWindow;
+
 
     private Context mContext;
 
@@ -45,6 +46,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent=new Intent(mContext, RoundRrogressBarActivity.class);
                 startActivity(intent);
                 break;
+
         }
     }
 

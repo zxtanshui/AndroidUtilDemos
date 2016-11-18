@@ -13,8 +13,9 @@
         android:id="@+id/btn_morewindow"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:background="#aabbcc"
-        android:text="moreWindow"/>
+        android:background="@color/color_btn"
+        android:text="moreWindow"
+    />
 
     <Button
         android:layout_marginTop="5dp"
@@ -22,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="roundprogressbar"
-        android:background="#aabbcc"
+        android:background="@color/color_btn"
     />
+
 </LinearLayout>
