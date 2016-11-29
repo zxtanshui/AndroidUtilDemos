@@ -20,7 +20,7 @@
         <activity android:name=".roundprogressbar.RoundRrogressBarActivity"
             android:screenOrientation="portrait"
         ></activity>
-        <activity android:name=".selectpic.imageloader.ShowSelectPicActivity"
+        <activity android:name=".selectpic.ShowSelectPicActivity"
             android:screenOrientation="portrait"
         ></activity>
         <activity android:name=".selectpic.imageloader.SelectPicActivity"

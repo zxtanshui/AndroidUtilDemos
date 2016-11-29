@@ -1,4 +1,4 @@
-package com.xinxiong.androidutilsdemo.selectpic.imageloader;
+package com.xinxiong.androidutilsdemo.selectpic;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SwitchCompat;
 import android.util.Log;
 import android.view.View;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.xinxiong.androidutilsdemo.R;
 import com.xinxiong.androidutilsdemo.selectpic.adapter.PicturesShowAdapter;
+import com.xinxiong.androidutilsdemo.selectpic.imageloader.SelectPicActivity;
 
 import java.util.ArrayList;
 import java.util.List;

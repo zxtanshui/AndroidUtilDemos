@@ -5,12 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.xinxiong.androidutilsdemo.morewidow.MoreWindow;
 import com.xinxiong.androidutilsdemo.roundprogressbar.RoundRrogressBarActivity;
-import com.xinxiong.androidutilsdemo.selectpic.imageloader.ShowSelectPicActivity;
+import com.xinxiong.androidutilsdemo.selectpic.ShowSelectPicActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
