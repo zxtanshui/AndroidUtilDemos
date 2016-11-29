@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:background="@color/color_pink" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top_back"
+        android:layout_width="60dp"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/iv_left_image"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@mipmap/icon_title_back"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/color_white"
+        android:text="客户管理"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_send_picture"
+        android:layout_width="60dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="visible" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+
+            android:text="发送"
+            android:textColor="@color/color_white"
+        />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

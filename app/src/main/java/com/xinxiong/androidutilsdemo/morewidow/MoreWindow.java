@@ -197,7 +197,6 @@ public class MoreWindow extends PopupWindow implements OnClickListener {
 						@Override
 						public void onAnimationRepeat(Animator animation) {
 							// TODO Auto-generated method stub
-
 						}
 
 						@Override

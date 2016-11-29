@@ -24,5 +24,8 @@
             <enum name="TRANSLUCENT" value="2"></enum>
         </attr>
     </declare-styleable>
-
+    <style name="selectpic_anim_popup_dir">
+        <item name="android:windowEnterAnimation">@anim/selectpic_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/selectpic_slide_out</item>
+    </style>
 </resources>

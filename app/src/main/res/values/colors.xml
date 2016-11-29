@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="color_btn">#aabbcc</color>
+    <color name="color_pink">#FFDAB6</color>
+    <color name="color_red">#EE5555</color>
+    <color name="color_white">#ffffff</color>
 </resources>

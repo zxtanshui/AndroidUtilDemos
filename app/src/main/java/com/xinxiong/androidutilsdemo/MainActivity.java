@@ -10,17 +10,19 @@ import android.widget.TextView;
 
 import com.xinxiong.androidutilsdemo.morewidow.MoreWindow;
 import com.xinxiong.androidutilsdemo.roundprogressbar.RoundRrogressBarActivity;
+import com.xinxiong.androidutilsdemo.selectpic.imageloader.ShowSelectPicActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    @BindView(R.id.btn_morewindow)
-     Button btn_morewindow;
-    @BindView(R.id.btn_roundprogressbar)
-     Button btn_roundprogressbar;
+    @BindView(R.id.tv_morewindow)
+     TextView tv_morewindow;
+    @BindView(R.id.tv_roundprogressbar)
+     TextView tv_roundprogressbar;
      MoreWindow mMoreWindow;
-
+    @BindView(R.id.tv_select_pictures)
+    TextView tv_select_pictures;
 
     private Context mContext;
 
@@ -30,23 +32,27 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mContext=MainActivity.this;
-        btn_morewindow.setOnClickListener(this);
-        btn_roundprogressbar.setOnClickListener(this);
-
+        tv_morewindow.setOnClickListener(this);
+        tv_roundprogressbar.setOnClickListener(this);
+        tv_select_pictures.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()){
-            case R.id.btn_morewindow:
-                showMoreWindow(btn_morewindow);
+            case R.id.tv_morewindow:
+                showMoreWindow(tv_morewindow);
                 break;
 
-            case R.id.btn_roundprogressbar:
-                Intent intent=new Intent(mContext, RoundRrogressBarActivity.class);
+            case R.id.tv_roundprogressbar:
+                 intent=new Intent(mContext, RoundRrogressBarActivity.class);
                 startActivity(intent);
                 break;
-
+            case R.id.tv_select_pictures:
+                 intent=new Intent(mContext, ShowSelectPicActivity.class);
+                 startActivity(intent);
+                break;
         }
     }
 
