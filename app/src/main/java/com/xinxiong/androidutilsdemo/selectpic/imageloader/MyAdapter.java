@@ -62,10 +62,10 @@ public class MyAdapter extends CommonAdapter<String> {
 				} else
 				// 未选择该图片
 				{
-					if (mSelectedImage.size() >= 3) {
-						Toast.makeText(mContext, "最多只能选择3张图片", Toast.LENGTH_SHORT).show();
-						return;
-					}
+//					if (mSelectedImage.size() >= 3) {
+//						Toast.makeText(mContext, "最多只能选择3张图片", Toast.LENGTH_SHORT).show();
+//						return;
+//					}
 					mSelectedImage.add(mDirPath + "/" + item);
 					mSelect.setImageResource(R.mipmap.selectpic_pictures_selected);
 					mImageView.setColorFilter(Color.parseColor("#77000000"));
@@ -105,4 +105,13 @@ public class MyAdapter extends CommonAdapter<String> {
 
 		return mSelectedImage_new;
 	}
+    //切换
+    public void  setmDatas(List<String> mDataList,String dirPath){
+        this.mDirPath = dirPath;
+        if(!mDatas.containsAll(mDataList)){
+            //mDatas.addAll(mDataList);
+            mDatas=mDataList;
+        }
+
+    }
 }

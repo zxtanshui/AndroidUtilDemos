@@ -7,11 +7,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -78,6 +80,7 @@ public class SelectPicActivity  extends Activity implements
 	private RelativeLayout rl_send_picture;// 导航栏右边
 	private ImageView iv_left_image;
 	private TextView tv_top_title;
+    private String tag="SelectPicActivity";
 	private Handler mHandler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
 			mProgressDialog.dismiss();
@@ -301,13 +304,20 @@ public class SelectPicActivity  extends Activity implements
 		/**
 		 * 可以看到文件夹的路径和图片的路径分开保存，极大的减少了内存的消耗；
 		 */
-		/*
-		 * mAdapter = new MyAdapter(getApplicationContext(), mImgs,
-		 * R.layout.grid_item, mImgDir.getAbsolutePath());
-		 * mGirdView.setAdapter(mAdapter); // mAdapter.notifyDataSetChanged();
-		 * 
-		 * mImageCount.setText(count+"/"+floder.getCount() + "张");
-		 */
+
+          if(mAdapter==null){
+              mAdapter = new MyAdapter(getApplicationContext(), mImgs,
+                      R.layout.selectpic_grid_item, mImgDir.getAbsolutePath());
+              mGirdView.setAdapter(mAdapter); // mAdapter.notifyDataSetChanged();
+          }else{
+                mAdapter.setmDatas(mImgs,mImgDir.getAbsolutePath());
+              mAdapter.notifyDataSetChanged();
+          }
+
+
+
+		  //mImageCount.setText(count+"/"+floder.getCount() + "张");
+
 		mChooseDir.setText(floder.getName());
 		mListImageDirPopupWindow.dismiss();
 

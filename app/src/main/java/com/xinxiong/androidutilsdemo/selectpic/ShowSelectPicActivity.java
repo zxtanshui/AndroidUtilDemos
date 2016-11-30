@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -46,7 +47,8 @@ public class ShowSelectPicActivity extends Activity implements View.OnClickListe
 
     public void initView(){
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(mContext,3));
         mRecyclerView.setAdapter(mAdapter = new PicturesShowAdapter(mContext));
 
         tv_selectpic.setOnClickListener(this);
