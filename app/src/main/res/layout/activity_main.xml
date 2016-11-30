@@ -13,25 +13,24 @@
         android:id="@+id/tv_morewindow"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:background="@color/color_btn"
-        android:text="moreWindow"
-        android:gravity="center"
+        android:text="morewindow"
+        style="@style/btn_style"
     />
 
     <TextView
-        android:layout_marginTop="5dp"
+
         android:id="@+id/tv_roundprogressbar"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:text="roundprogressbar"
-        android:background="@color/color_btn"
-        android:gravity="center"
+        style="@style/btn_style"
     />
 
     <TextView
         android:id="@+id/tv_select_pictures"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:text="多图选择"
+        android:layout_height="30dp"
+        android:text="多图选择"
+        style="@style/btn_style"
     />
 </LinearLayout>

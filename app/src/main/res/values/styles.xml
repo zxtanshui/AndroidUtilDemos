@@ -28,4 +28,12 @@
         <item name="android:windowEnterAnimation">@anim/selectpic_slide_in</item>
         <item name="android:windowExitAnimation">@anim/selectpic_slide_out</item>
     </style>
+
+    <style name="btn_style">
+        <item name="android:background">@color/color_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
 </resources>
