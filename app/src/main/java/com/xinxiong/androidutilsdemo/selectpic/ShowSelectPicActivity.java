@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xinxiong.androidutilsdemo.R;
@@ -30,6 +32,11 @@ public class ShowSelectPicActivity extends Activity implements View.OnClickListe
      RecyclerView mRecyclerView;
     @BindView(R.id.tv_selectpic)
      TextView tv_selectpic;
+
+//    @BindView(R.id.viewPager)
+//    ViewPager viewPager;
+//    @BindView(R.id.viewGroup)
+//    LinearLayout viewGroup;
 
     private PicturesShowAdapter mAdapter;
     private List<String> picList=new ArrayList<>();

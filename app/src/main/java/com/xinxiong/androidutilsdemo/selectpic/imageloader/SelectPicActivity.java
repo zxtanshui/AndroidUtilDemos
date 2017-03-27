@@ -36,6 +36,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+import rx.Observable;
+
 public class SelectPicActivity  extends Activity implements
         ListImageDirPopupWindow.OnImageDirSelected, OnClickListener {
 	private ProgressDialog mProgressDialog;
@@ -182,6 +184,7 @@ public class SelectPicActivity  extends Activity implements
 		// 显示进度条
 		mProgressDialog = ProgressDialog.show(this, null, "正在加载...");
 
+
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -254,6 +257,14 @@ public class SelectPicActivity  extends Activity implements
 
 			}
 		}).start();
+
+
+
+
+
+
+
+
 
 	}
 

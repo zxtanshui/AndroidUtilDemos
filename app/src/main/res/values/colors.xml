@@ -8,4 +8,6 @@
     <color name="color_red">#EE5555</color>
     <color name="color_white">#ffffff</color>
     <color name="color_cccccc">#cccccc</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="actionsheet_blue">#037BFF</color>
 </resources>

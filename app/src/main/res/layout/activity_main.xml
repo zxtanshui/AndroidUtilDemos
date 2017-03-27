@@ -8,29 +8,146 @@
     tools:context="com.xinxiong.androidutilsdemo.MainActivity"
     android:orientation="vertical"
 >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_morewindow"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="morewindow"
-        style="@style/btn_style"
-    />
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+    >
+        <TextView
+            android:id="@+id/tv_morewindow"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="morewindow"
+            style="@style/btn_style"
+        />
 
-    <TextView
+        <TextView
 
-        android:id="@+id/tv_roundprogressbar"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="roundprogressbar"
-        style="@style/btn_style"
-    />
+            android:id="@+id/tv_roundprogressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="roundprogressbar"
+            style="@style/btn_style"
+        />
 
-    <TextView
-        android:id="@+id/tv_select_pictures"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="多图选择"
-        style="@style/btn_style"
-    />
+        <TextView
+            android:id="@+id/tv_select_pictures"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="多图选择"
+            style="@style/btn_style"
+        />
+        <TextView
+
+            android:id="@+id/tv_textspan"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="局部字体颜色变化"
+            style="@style/btn_style"/>
+
+        <TextView
+            android:id="@+id/tv_morewindow1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="morewindow1"
+            style="@style/btn_style"
+
+        />
+        <TextView
+            android:id="@+id/tv_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="progressbar"
+            style="@style/btn_style"
+        />
+        <TextView
+            android:id="@+id/tv_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="edittest"
+            style="@style/btn_style"
+        />
+        <TextView
+            android:id="@+id/tv_mediaplay"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="mediaPlay"
+            style="@style/btn_style"
+        />
+        <RelativeLayout
+            android:id="@+id/rl_click"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/color_pink"
+            android:visibility="gone"
+        >
+            <TextView
+                android:id="@+id/tv_dialogshow"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="dialog对话框"
+                style="@style/btn_style"
+            />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_show_man"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="显示厂商"
+        />
+
+        <EditText
+            android:id="@+id/et_test"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+        />
+        <Button
+            android:id="@+id/btn_clk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示日期"
+        />
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="显示验证码图片"
+            />
+
+            <ImageView
+                android:layout_toRightOf="@+id/btn_code"
+                android:id="@+id/iv_show"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_line"
+                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                android:text="显示折线图"
+            />
+            <com.xinxiong.androidutilsdemo.linechat.SimpleLineChart
+              android:layout_below="@+id/btn_line"
+            android:id="@+id/simpleLineChart"
+            android:layout_width="400dp"
+            android:layout_height="200dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+
 </LinearLayout>

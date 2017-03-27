@@ -10,7 +10,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+
+        >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,12 +22,29 @@
         </activity>
         <activity android:name=".roundprogressbar.RoundRrogressBarActivity"
             android:screenOrientation="portrait"
+                  
         ></activity>
         <activity android:name=".selectpic.ShowSelectPicActivity"
             android:screenOrientation="portrait"
         ></activity>
         <activity android:name=".selectpic.imageloader.SelectPicActivity"
             android:screenOrientation="portrait"
+        ></activity>
+        <activity android:name="com.xinxiong.androidutilsdemo.textspan.TextSpanActivity"
+                  android:screenOrientation="portrait"
+        ></activity>
+        <activity android:name=".progressbardialog.ProgressBarDialogActivity"
+                  android:screenOrientation="portrait"
+        ></activity>
+        <activity android:name=".EditTextActivity.EditTestActivity"
+                  android:screenOrientation="portrait"
+        ></activity>
+        <activity android:name=".mediaplay.MediaPlayDemo"
+                  android:screenOrientation="portrait"
+        ></activity>
+
+        <activity android:name=".ActionSheetDialog.DialogActivity"
+                  android:screenOrientation="portrait"
         ></activity>
     </application>
 
