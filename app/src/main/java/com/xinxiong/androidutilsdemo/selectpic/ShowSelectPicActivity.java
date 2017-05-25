@@ -32,7 +32,7 @@ public class ShowSelectPicActivity extends Activity implements View.OnClickListe
      RecyclerView mRecyclerView;
     @BindView(R.id.tv_selectpic)
      TextView tv_selectpic;
-
+    private String TAG ="ShowSelectPicActivity";
 //    @BindView(R.id.viewPager)
 //    ViewPager viewPager;
 //    @BindView(R.id.viewGroup)
@@ -45,6 +45,7 @@ public class ShowSelectPicActivity extends Activity implements View.OnClickListe
     private final String tag="ShowSelectPicActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.e(TAG,"oncrete0-------");
         super.onCreate(savedInstanceState);
         mContext=ShowSelectPicActivity.this;
         setContentView(R.layout.activity_showselectpic);

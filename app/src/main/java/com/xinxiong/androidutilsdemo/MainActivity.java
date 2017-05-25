@@ -138,12 +138,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 if(start==0){
                     return;
                 }
-                Log.e(TAG,"s-----"+s.toString().substring(start,start+count));
+               // Log.e(TAG,"s-----"+s.toString().substring(start,start+count));
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                Log.e(TAG,"s-->"+s+" start-->"+start+" before-->"+before+" count-->"+count);
+                Log.e(TAG,"s------"+s+" start-->"+start+" before-->"+before+" count-->"+count);
             }
 
             @Override
@@ -202,6 +202,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.tv_select_pictures:
                  intent=new Intent(mContext, ShowSelectPicActivity.class);
                  startActivity(intent);
+                finish();
                 break;
             case R.id.tv_textspan:
                 intent=new Intent(mContext, TextSpanActivity.class);
@@ -309,5 +310,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
             pointMap.put(i, (int) (Math.random()*5));
         }
         mSimpleLineChart.setData(pointMap);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e(TAG,"ondestory-------");
     }
 }
