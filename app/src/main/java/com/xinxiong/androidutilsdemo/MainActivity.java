@@ -7,6 +7,10 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.support.annotation.RequiresApi;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
@@ -21,6 +25,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.util.LruCache;
 import com.xinxiong.androidutilsdemo.ActionSheetDialog.DialogActivity;
 import com.xinxiong.androidutilsdemo.EditTextActivity.EditTestActivity;
 import com.xinxiong.androidutilsdemo.codeutils.CodeUtils;
@@ -94,19 +99,34 @@ public class MainActivity extends Activity implements View.OnClickListener {
         initView();
         initLine();
         String s="/storage/emulated/0/upload_/jyall1484225014924.jpg";
-        //Glide.with(mContext).load(s).into(iv);
-//
-//        Glide.with(mContext)
-//                .load(s)
-//                .asBitmap()
-//                //.override(resultWidth, resultHeight)
-//                .fitCenter()
-//                .diskCacheStrategy(DiskCacheStrategy.ALL)
-//               // .placeholder(defDrawId)
-//                .thumbnail(1f)
-//              //  .error(defDrawId)
-////                .transform(new BitmapTransformation(mContext, 10f))
-//                .into(iv);
+        Glide.with(mContext).load(s).into(iv_show);
+
+        Glide.with(mContext)
+                .load(s)
+                .asBitmap()
+                .override(200, 200)
+                .fitCenter()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .placeholder(0)
+                .thumbnail(1f)
+                .error(0)
+//                .transform(new BitmapTransformation(mContext, 10f))
+                .into(iv_show);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Looper.prepare();
+                Handler handler = new Handler(){
+                    @Override
+                    public void handleMessage(Message msg) {
+                        super.handleMessage(msg);
+                            Toast.makeText(mContext,"呵呵",Toast.LENGTH_SHORT).show();
+                    }
+                };
+                Looper.loop();
+            }
+        }).start();
+
     }
 
     public void initView(){
@@ -153,6 +173,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         });
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     public void test(){
         AsyncTask asyncTask=new AsyncTask() {
             @Override

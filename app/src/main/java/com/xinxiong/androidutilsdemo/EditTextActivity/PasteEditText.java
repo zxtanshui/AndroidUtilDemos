@@ -13,7 +13,7 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
 import android.util.AttributeSet;
-import android.widget.EditText;
+import android.support.v7.widget.AppCompatEditText;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
  * 自定义的textview，用来处理复制粘贴的消息
  * 
  */
-public class PasteEditText extends EditText {
+public class PasteEditText extends AppCompatEditText {
 	private Context context;
 
 	public PasteEditText(Context context) {
