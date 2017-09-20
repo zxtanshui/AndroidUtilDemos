@@ -23,6 +23,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.asm.Type;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.xinxiong.androidutilsdemo.ActionSheetDialog.DialogActivity;
@@ -147,7 +149,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             }
         }).start();
         //jsonAnalysisObject();
-        jsonAnalysisArray();
+        //jsonAnalysisArray();
+        //jsonFastObject();
+        jsonFastArray();
     }
 
     public void initView(){
@@ -444,6 +448,29 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         Log.e(TAG,"list----"+list.toString());
     }
+
+    public void jsonFastObject(){
+        String jsonString = getFromAssets("jsonStringObject");
+        try{
+            JSON gson =JSON.parseObject(jsonString);
+            BeanTemo1 beanTemo1 = gson.toJavaObject(BeanTemo1.class);
+            Log.e(TAG, beanTemo1.toString());
+        }catch (Exception e){
+
+        }
+    }
+
+    public void jsonFastArray(){
+        List<BeanTemo1> list = new ArrayList<>();
+        String jsonString = getFromAssets("jsonStringArray");
+        try{
+            list = JSON.parseArray(jsonString,BeanTemo1.class);
+            Log.e(TAG,"list-->"+list.toString());
+        }catch (Exception e){
+
+        }
+    }
+
 
     public String getFromAssets(String fileName){
         String line="";
