@@ -145,6 +145,49 @@
             android:layout_width="400dp"
             android:layout_height="200dp" />
         </RelativeLayout>
+        <com.xinxiong.androidutilsdemo.drawview.DrawView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        ></com.xinxiong.androidutilsdemo.drawview.DrawView>
+        <TextView
+            android:id="@+id/tv_moreprocess"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="启动多进程1"
+            style="@style/btn_style"
+        />
+        <TextView
+            android:id="@+id/tv_moreprocess1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="启动多进程2"
+            style="@style/btn_style"
+        />
+        <TextView
+            android:id="@+id/tv_animator"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="启动动画"
+            style="@style/btn_style"
+        />
+
+        <TextView
+            android:id="@+id/tv_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="子线程弹Toast"
+            style="@style/btn_style"
+        />
+
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="刷新"
+            style="@style/btn_style"
+        />
+
     </LinearLayout>
 
 </ScrollView>

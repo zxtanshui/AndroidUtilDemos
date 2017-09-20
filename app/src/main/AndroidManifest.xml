@@ -46,6 +46,22 @@
         <activity android:name=".ActionSheetDialog.DialogActivity"
                   android:screenOrientation="portrait"
         ></activity>
+        <activity android:name=".moreprocess.TestActivity1"
+                  android:screenOrientation="portrait"
+                  android:process=":remote"
+        ></activity>
+        <activity android:name="com.xinxiong.androidutilsdemo.moreprocess.TestActivity2"
+                  android:screenOrientation="portrait"
+                  android:process="com.xinxiong.androidutilsdemo.remote"
+        ></activity>
+        <activity android:name=".animator.AnimatorActivity"
+                  android:screenOrientation="portrait"
+                  android:process="com.xinxiong.androidutilsdemo.remote"
+        ></activity>
+        <activity android:name=".swiperefreshlayout.SwipeRefreshLayoutActivity"
+                  android:screenOrientation="portrait"
+                  android:process="com.xinxiong.androidutilsdemo.remote"
+        ></activity>
     </application>
 
 </manifest>
